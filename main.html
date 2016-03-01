@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Phase 1 (Simple Code in JavaScript)
+
+Develop two simple web pages. The first (main screen) should include a simple button. When
+
+the user presses that button the randomized generated numbers should be displayed on the
+
+screen.
+
+The second (setting screen) should include simple user interface that allows the user to
+
+set how many numbers should be generated and their range. Passing data from one page to
+
+another will be implemented in phase #4. Storing the entered data to the web browser local
+
+storage will be implemented in phase #4.-->
+<script type="application/javascript">
+    function generate_number(min,max)
+    {
+        number = Math.floor(Math.random() * (max - min)) + min;
+        document.myform.random_num.value=number;
+    }
+</script>
+<form name="myform">
+<input type="button" value="RANDOM" onclick="generate_number(1,100)"/>
+<input type="text" name="random_num">
+</form>
+
+</body>
+</html>
